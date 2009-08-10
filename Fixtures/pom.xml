@@ -10,4 +10,11 @@
   <name>Fixtures</name>
   <version>1.0-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
+  <dependencies>
+      <dependency>
+          <groupId>com.c2.fit</groupId>
+          <artifactId>fit</artifactId>
+          <version>1.1</version>
+      </dependency>
+  </dependencies>
 </project>
