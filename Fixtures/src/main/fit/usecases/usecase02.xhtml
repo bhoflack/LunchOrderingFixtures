@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <h1>Use Case 02 : User orders lunch</h1>
+        <h2>Main Scenario</h2>
+        <ol type="1">
+            <li>1 User logs in</li>
+            <li>System informs user of the current balance and shows available products</li>
+            <li>3 User selects lunch by adding available products to order</li>
+            <li>4 System verifies the remaining balance and informs user of balance and order</li>
+            <li>  repeat 3-4  till order complete</li>
+            <li>5 User confirms choice</li>
+            <li>6 System validates and updates balance, registers order</li>
+            <li>7 System confirms order and wishes the User a nice day</li>
+        </ol>
+
+        <h2>Alternatives</h2>
+        <ul>
+            <li>
+                <p>2a Remaining balance is too low to order any product</p>
+                <ol>
+                    <li>System informs user that nu order is possible</li>
+                    <li><a href="usecase01.xhtml">User adds money to Balance</a></li>
+                </ol>
+            </li>
+            <li>
+                <p>2b Remaining balance is too low to offer all products</p>
+                <ol>
+                    <li>- 2b1 The System shows the products but makes them unavailable</li>
+                </ol>
+            </li>
+            <li>
+                <p>6a User tries to cheat and confirms multiple orders of which the sum exceeds the balance.</p>
+                <p>rationale : </p>
+                <p>The user opens several sessions and builds several orders for which the total exceeds the balance. It depends strongly on the implementation but is a risk worth checking for. It serves to verify the validation is against the persistent record f the balance, not some cached value in a session or conversation.</p>
+                <ol>
+                    <li>Validation of remaining balance fails</li>
+                    <li>System informs user the remaining balance is insufficient.</li>
+                    <li>continue from 2</li>
+                </ol>
+            </li>
+        </ul>
+    </body>
+</html>
